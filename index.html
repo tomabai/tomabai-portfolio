@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Abai | Security Researcher</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Unbounded:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="matrix-bg" id="matrixBg"></div>
+
+    <!-- Scanline overlay -->
+    <div class="scanlines"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="prompt">root@tomabai:~$</span>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">./about</a>
+                <a href="#experience" class="nav-link">./experience</a>
+                <a href="#research" class="nav-link">./research</a>
+                <a href="#certifications" class="nav-link">./certs</a>
+                <a href="#contact" class="nav-link">./contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-profile-container">
+                    <div class="hero-profile">
+                        <img src="profile.png" alt="Tom Abai Profile" class="profile-image">
+                    </div>
+                    <button class="theme-toggle-hero" onclick="toggleTheme()" title="Toggle Looney Mode">
+                        <span class="theme-icon">🎨</span>
+                        <span class="theme-label">Try Looney Mode!</span>
+                    </button>
+                </div>
+                <div class="glitch-wrapper">
+                    <h1 class="hero-title glitch" data-text="TOM ABAI">TOM ABAI</h1>
+                </div>
+                <div class="terminal-text">
+                    <span class="prompt-symbol">></span>
+                    <span class="typewriter" id="typewriter"></span>
+                    <span class="cursor">_</span>
+                </div>
+                <p class="hero-subtitle">
+                    Passionate and innovative Security Researcher, specializing in AI and Supply Chain security.
+                    Proven track record of conducting cutting-edge research into emerging security challenges.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">
+                        <span class="btn-text">Initialize Contact</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="https://www.mend.io/author/tom-abai/" target="_blank" class="btn btn-secondary">
+                        <span class="btn-text">View Research</span>
+                        <span class="btn-icon">↗</span>
+                    </a>
+                </div>
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">STATUS:</span>
+                        <span class="meta-value status-active">ACTIVE</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">LOCATION:</span>
+                        <span class="meta-value">IL/HAIFA</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">CLEARANCE:</span>
+                        <span class="meta-value">PUBLIC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Competencies -->
+    <section id="about" class="section competencies">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">[01]</span>
+                CORE_COMPETENCIES
+            </h2>
+            <div class="competencies-grid">
+                <div class="competency-card" style="animation-delay: 0.1s">
+                    <div class="card-header">
+                        <span class="card-icon">🔒</span>
+                        <h3>LLM Security & Adversarial AI</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Advanced research in AI model vulnerabilities, prompt injection, and adversarial attacks against large language models.</p>
+                    </div>
+                </div>
+                <div class="competency-card" style="animation-delay: 0.2s">
+                    <div class="card-header">
+                        <span class="card-icon">🔗</span>
+                        <h3>Supply Chain Security</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Deep expertise in analyzing software supply chain threats, dependency vulnerabilities, and open-source security.</p>
+                    </div>
+                </div>
+                <div class="competency-card" style="animation-delay: 0.3s">
+                    <div class="card-header">
+                        <span class="card-icon">🐛</span>
+                        <h3>Vulnerability Detection</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Published CVE researcher with proven ability to discover and analyze critical vulnerabilities in production systems.</p>
+                    </div>
+                </div>
+                <div class="competency-card" style="animation-delay: 0.4s">
+                    <div class="card-header">
+                        <span class="card-icon">🎯</span>
+                        <h3>Threat Intelligence</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Malware analysis across multiple programming languages, threat hunting, and security incident documentation.</p>
+                    </div>
+                </div>
+                <div class="competency-card" style="animation-delay: 0.5s">
+                    <div class="card-header">
+                        <span class="card-icon">🔧</span>
+                        <h3>Security Tools Development</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Python scripting, security automation, offensive security tools (Kali Linux), and vulnerability assessment frameworks.</p>
+                    </div>
+                </div>
+                <div class="competency-card" style="animation-delay: 0.6s">
+                    <div class="card-header">
+                        <span class="card-icon">🛡️</span>
+                        <h3>Open Source Threat Intelligence</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>OSINT methodologies, threat actor profiling, and intelligence gathering from public sources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">[02]</span>
+                PROFESSIONAL_EXPERIENCE
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item" style="animation-delay: 0.1s">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Security Researcher</h3>
+                                <p class="timeline-company">Mend.io</p>
+                            </div>
+                            <span class="timeline-date">Nov 2022 - Present</span>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>Research on malicious open-source packages and foundation models</li>
+                            <li>Conducted in-depth analysis of vulnerabilities in open-source projects</li>
+                            <li>Utilized AWS Bedrock models for advanced vulnerability scoring</li>
+                            <li>Analyzed malware across multiple programming languages (C++, C#, Rust, JavaScript)</li>
+                            <li>Collaborated closely with product and development teams to enhance security capabilities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" style="animation-delay: 0.2s">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Security Research Analyst</h3>
+                                <p class="timeline-company">Mend.io</p>
+                            </div>
+                            <span class="timeline-date">Aug 2020 - Nov 2022</span>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>Investigated daily published vulnerabilities in open-source ecosystems</li>
+                            <li>Researched and developed methods to improve product security</li>
+                            <li>Contributed to high-profile security advisories and bug bounty programs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" style="animation-delay: 0.3s">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Production Supervisor</h3>
+                                <p class="timeline-company">Palram</p>
+                            </div>
+                            <span class="timeline-date">Mar 2018 - Apr 2021</span>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>Enhanced production efficiency by 15% through Excel-based analytics</li>
+                            <li>Led technical teams in plastic industry operations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" style="animation-delay: 0.4s">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Technical Specialist Team Leader</h3>
+                                <p class="timeline-company">Palram</p>
+                            </div>
+                            <span class="timeline-date">Apr 2012 - Mar 2018</span>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>Designed and assembled complex profiles for the plastic industry</li>
+                            <li>Upgraded key department abilities and assembly time by 30%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Highlights -->
+    <section id="research" class="section research">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">[03]</span>
+                RESEARCH_HIGHLIGHTS
+            </h2>
+            <div class="research-grid">
+                <div class="research-card featured" style="animation-delay: 0.1s">
+                    <div class="card-badge">FEATURED</div>
+                    <div class="card-content">
+                        <h3 class="research-title">LLM-Sec.dev Platform</h3>
+                        <p class="research-description">
+                            Created llm-sec.dev, an educational platform for learning about LLM vulnerabilities,
+                            providing hands-on challenges and resources for understanding AI security threats.
+                            Interactive labs covering prompt injection, jailbreaks, and other LLM attack vectors.
+                        </p>
+                        <a href="https://llm-sec.dev"
+                           target="_blank"
+                           class="research-link">
+                            Visit Platform →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="research-card" style="animation-delay: 0.2s">
+                    <div class="card-content">
+                        <h3 class="research-title">Supply Chain Incidents</h3>
+                        <p class="research-description">
+                            In-depth analysis of supply chain security incidents, malicious packages,
+                            and emerging threats in open-source ecosystems.
+                        </p>
+                        <a href="https://www.mend.io/author/tom-abai/"
+                           target="_blank"
+                           class="research-link">
+                            View Articles →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="research-card" style="animation-delay: 0.3s">
+                    <div class="card-content">
+                        <h3 class="research-title">Supply-Chain-Threat-Hunting Report</h3>
+                        <p class="research-description">
+                            Comprehensive analysis of supply chain attack vectors and mitigation strategies.
+                            Published research documenting emerging threats in open-source ecosystems.
+                        </p>
+                        <a href="https://github.com/tomabai/Supply-Chain-Threat-Hunting/blob/main/Essential-Guide-to-Threat-Hunting-2024-Report.pdf"
+                           target="_blank"
+                           class="research-link">
+                            Read Full Report →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skills-section">
+                <h3 class="skills-title">TECHNICAL_ARSENAL</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Programming</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Go</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Security Tools</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Wireshark</span>
+                            <span class="skill-tag">Metasploit</span>
+                            <span class="skill-tag">Burp Suite</span>
+                            <span class="skill-tag">IDA Pro</span>
+                            <span class="skill-tag">Hugging Face</span>
+                            <span class="skill-tag">Guardrails-AI</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Languages</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">English (Fluent)</span>
+                            <span class="skill-tag">Hebrew (Fluent)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="section certifications">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">[04]</span>
+                CERTIFICATIONS_&_TRAINING
+            </h2>
+            <div class="cert-grid">
+                <div class="cert-card" style="animation-delay: 0.1s">
+                    <div class="cert-header">
+                        <span class="cert-badge">2024</span>
+                        <h3 class="cert-title">Practical Web Hacking</h3>
+                    </div>
+                    <p class="cert-org">TCM Security</p>
+                    <ul class="cert-details">
+                        <li>Web application vulnerability assessment</li>
+                        <li>Hands-on methodologies for security testing</li>
+                    </ul>
+                </div>
+
+                <div class="cert-card" style="animation-delay: 0.2s">
+                    <div class="cert-header">
+                        <span class="cert-badge">2024</span>
+                        <h3 class="cert-title">Practical Bug Bounty</h3>
+                    </div>
+                    <p class="cert-org">TCM Security</p>
+                    <ul class="cert-details">
+                        <li>Web application vulnerability assessment</li>
+                        <li>Hands-on methodologies for security testing</li>
+                    </ul>
+                </div>
+
+                <div class="cert-card" style="animation-delay: 0.3s">
+                    <div class="cert-header">
+                        <span class="cert-badge">2023</span>
+                        <h3 class="cert-title">Certified Malware Analyst Professional</h3>
+                    </div>
+                    <p class="cert-org">MalwareAnalysis.co</p>
+                    <ul class="cert-details">
+                        <li>40 CEU Hours | Advanced static and dynamic malware analysis</li>
+                        <li>Reverse engineering using IDA Pro</li>
+                    </ul>
+                </div>
+
+                <div class="cert-card" style="animation-delay: 0.4s">
+                    <div class="cert-header">
+                        <span class="cert-badge">2022</span>
+                        <h3 class="cert-title">Practical Ethical Hacking</h3>
+                    </div>
+                    <p class="cert-org">TCM Security</p>
+                    <ul class="cert-details">
+                        <li>In-depth network penetration testing</li>
+                        <li>Web application security fundamentals (OWASP Top 10)</li>
+                    </ul>
+                </div>
+
+                <div class="cert-card" style="animation-delay: 0.5s">
+                    <div class="cert-header">
+                        <span class="cert-badge">2022</span>
+                        <h3 class="cert-title">Osint Fundamentals</h3>
+                    </div>
+                    <p class="cert-org">TCM Security</p>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="education-section">
+                <h3 class="education-title">ACADEMIC_BACKGROUND</h3>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h4>Cybersecurity Diploma</h4>
+                            <span class="education-date">Apr 2021 - Present</span>
+                        </div>
+                        <p class="education-org">Cybint & 8200 Alumni Association</p>
+                        <p class="education-detail">Postgraduate Diploma</p>
+                        <ul class="education-topics">
+                            <li>Foundational training in network defense, ethical hacking, digital forensics</li>
+                            <li>Threat intelligence and malware analysis</li>
+                        </ul>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h4>Bachelor of Arts</h4>
+                            <span class="education-date">Oct 2017 - Jun 2020</span>
+                        </div>
+                        <p class="education-org">Western Galil College</p>
+                        <p class="education-detail">Academic Excellence: 85</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Military Service -->
+            <div class="military-section">
+                <h3 class="military-title">MILITARY_SERVICE</h3>
+                <div class="military-card">
+                    <div class="military-header">
+                        <h4>Fighter - NAHAL Unit</h4>
+                        <span class="military-duration">3 years</span>
+                    </div>
+                    <p class="military-detail">Served with distinction in specialized combat operations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">[05]</span>
+                ESTABLISH_CONNECTION
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-intro">
+                        Open for security research collaborations, speaking engagements,
+                        and consulting opportunities. Let's discuss emerging threats and innovative solutions.
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:tom.abai12@gmail.com" class="contact-method">
+                            <span class="method-icon">📧</span>
+                            <span class="method-label">EMAIL</span>
+                            <span class="method-value">tom.abai12@gmail.com</span>
+                        </a>
+                        <a href="https://x.com/abai_tom" target="_blank" class="contact-method">
+                            <span class="method-icon">𝕏</span>
+                            <span class="method-label">X (TWITTER)</span>
+                            <span class="method-value">@abai_tom</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/tom-abai-a4862915a/" target="_blank" class="contact-method">
+                            <span class="method-icon">💼</span>
+                            <span class="method-label">LINKEDIN</span>
+                            <span class="method-value">linkedin.com/in/tom-abai-a4862915a</span>
+                        </a>
+                        <a href="https://www.mend.io/author/tom-abai/" target="_blank" class="contact-method">
+                            <span class="method-icon">📝</span>
+                            <span class="method-label">ARTICLES</span>
+                            <span class="method-value">mend.io/author/tom-abai</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-visual">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-dot"></span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="terminal-prompt">$</span> whoami</p>
+                            <p class="terminal-output">tom_abai</p>
+                            <p><span class="terminal-prompt">$</span> cat interests.txt</p>
+                            <p class="terminal-output">- Cybersecurity Research</p>
+                            <p class="terminal-output">- Capture The Flag (CTF) Competitions</p>
+                            <p class="terminal-output">- Computer Troubleshooting</p>
+                            <p class="terminal-output">- Continuous Learning in AI Technologies</p>
+                            <p><span class="terminal-prompt">$</span> status</p>
+                            <p class="terminal-output status-active">● ONLINE - Ready for collaboration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    <span class="prompt-symbol">></span>
+                    Designed and built with security in mind
+                    <span class="footer-year">© 2025</span>
+                </p>
+                <p class="footer-tagline">
+                    "Skilled in analyzing complex security landscapes and collaborating across cross-functional teams to enhance product security."
+                </p>
+                <div class="footer-cta">
+                    <a href="tomabai.pdf" download="Tom_Abai_CV.pdf" class="btn btn-primary">
+                        <span class="btn-text">Download CV</span>
+                        <span class="btn-icon">↓</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
