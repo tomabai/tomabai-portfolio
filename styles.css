@@ -1539,8 +1539,29 @@ body:not(.looney-mode) .theme-label::before {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
     .nav-links {
         display: none;
+    }
+
+    .nav-container {
+        padding: var(--spacing-sm);
+    }
+
+    .nav-brand .prompt {
+        font-size: 0.75rem;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: calc(var(--spacing-xl) + 60px) 0 var(--spacing-lg) 0;
+    }
+
+    .hero-profile-container {
+        gap: var(--spacing-sm);
     }
 
     .profile-image {
@@ -1548,16 +1569,33 @@ body:not(.looney-mode) .theme-label::before {
         height: 150px;
     }
 
+    .theme-toggle-hero {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .theme-icon {
+        font-size: 1.2rem;
+    }
+
     .hero-title {
         font-size: 2.5rem;
+        text-align: center;
     }
 
     .terminal-text {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        text-align: center;
     }
 
     .hero-cta {
         flex-direction: column;
+        width: 100%;
     }
 
     .btn {
@@ -1565,19 +1603,56 @@ body:not(.looney-mode) .theme-label::before {
         justify-content: center;
     }
 
+    .hero-meta {
+        justify-content: center;
+        gap: var(--spacing-sm);
+    }
+
+    .meta-item {
+        font-size: 0.75rem;
+    }
+
+    .section {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
     .competencies-grid,
     .research-grid,
     .cert-grid,
-    .education-grid {
+    .education-grid,
+    .skills-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
     }
 
     .research-card.featured {
         grid-column: span 1;
     }
 
-    .contact-content {
-        grid-template-columns: 1fr;
+    .competency-card,
+    .research-card,
+    .cert-card,
+    .education-card {
+        padding: var(--spacing-sm);
+    }
+
+    .card-header h3,
+    .timeline-title,
+    .research-title,
+    .cert-title {
+        font-size: 1rem;
+    }
+
+    .card-body p,
+    .research-description,
+    .timeline-achievements li,
+    .cert-details li {
+        font-size: 0.85rem;
     }
 
     .timeline {
@@ -1586,6 +1661,76 @@ body:not(.looney-mode) .theme-label::before {
 
     .timeline-marker {
         left: -2rem;
+        width: 10px;
+        height: 10px;
+    }
+
+    .timeline-content {
+        padding: var(--spacing-sm);
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .timeline-date {
+        font-size: 0.75rem;
+    }
+
+    .skills-section {
+        padding: var(--spacing-sm);
+    }
+
+    .skill-tag {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .contact-intro {
+        font-size: 1rem;
+    }
+
+    .contact-method {
+        padding: var(--spacing-sm);
+        grid-template-columns: auto 1fr;
+        gap: 0.5rem;
+    }
+
+    .method-icon {
+        font-size: 1.2rem;
+    }
+
+    .method-label {
+        font-size: 0.7rem;
+    }
+
+    .method-value {
+        font-size: 0.85rem;
+        grid-column: 1 / -1;
+        padding-left: 0;
+    }
+
+    .terminal-window {
+        display: none;
+    }
+
+    .footer {
+        padding: var(--spacing-md) 0;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+    }
+
+    .footer-tagline {
+        font-size: 0.75rem;
     }
 
     .pdf-modal-content {
@@ -1596,27 +1741,119 @@ body:not(.looney-mode) .theme-label::before {
     .pdf-modal-title {
         font-size: 1.1rem;
     }
+
+    /* Looney Mode Mobile Adjustments */
+    body.looney-mode .hero-title {
+        font-size: 2.5rem;
+    }
+
+    body.looney-mode .section-title {
+        font-size: 1.8rem;
+    }
+
+    body.looney-mode .competency-card,
+    body.looney-mode .research-card,
+    body.looney-mode .cert-card {
+        transform: rotate(-1deg);
+    }
+
+    body.looney-mode .competency-card:nth-child(even),
+    body.looney-mode .research-card:nth-child(even),
+    body.looney-mode .cert-card:nth-child(even) {
+        transform: rotate(1deg);
+    }
 }
 
 @media (max-width: 480px) {
     :root {
         --spacing-sm: 0.75rem;
         --spacing-md: 1.5rem;
-        --spacing-lg: 3rem;
-        --spacing-xl: 4rem;
+        --spacing-lg: 2.5rem;
+        --spacing-xl: 3rem;
+    }
+
+    .hero {
+        padding: calc(var(--spacing-lg) + 60px) 0 var(--spacing-md) 0;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .theme-toggle-hero {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+
+    .theme-label {
+        font-size: 0.85rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .terminal-text {
+        font-size: 0.9rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
     }
 
     .hero-meta {
         flex-direction: column;
         gap: 0.5rem;
+        align-items: center;
+    }
+
+    .meta-item {
+        font-size: 0.7rem;
+    }
+
+    .section {
+        padding: var(--spacing-md) 0;
     }
 
     .section-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    .title-prefix {
+        font-size: 0.5em;
+    }
+
+    .card-header h3 {
+        font-size: 0.95rem;
+    }
+
+    .card-icon {
+        font-size: 1.5rem !important;
     }
 
     .timeline-header {
         flex-direction: column;
+    }
+
+    .timeline-title {
+        font-size: 0.95rem;
+    }
+
+    .timeline-company {
+        font-size: 0.85rem;
+    }
+
+    .research-title {
+        font-size: 1.1rem;
+    }
+
+    .cert-title {
+        font-size: 0.95rem;
+    }
+
+    .contact-intro {
+        font-size: 0.9rem;
     }
 
     .contact-method {
@@ -1626,10 +1863,26 @@ body:not(.looney-mode) .theme-label::before {
 
     .method-label {
         grid-column: 2;
+        font-size: 0.65rem;
     }
 
     .method-value {
         grid-column: 1 / -1;
-        padding-left: 2.5rem;
+        padding-left: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .footer-cta .btn {
+        font-size: 0.9rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    /* Looney Mode Extra Small Mobile */
+    body.looney-mode .hero-title {
+        font-size: 2rem;
+    }
+
+    body.looney-mode .section-title {
+        font-size: 1.5rem;
     }
 }
